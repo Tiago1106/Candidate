@@ -1,0 +1,56 @@
+{
+    "mission": "Proporcionar os melhores materiais ao cliente, oferecendo-os por meio de canais físicos e digitais, sempre com o intuito de tornar a experiência de consumo ágil e garantir que ela seja a mais prazerosa possível, ajustando-a às necessidades de cada cliente e buscando ultrapassar as suas expectativas.",
+    "vision": "Tornar-se referência no setor de materiais de construção em São Paulo",
+    "value": "confiança, comprometimento, qualidade, paixão por atender bem.",
+    "punishment": [
+        "Desligamento", "Multa", "Advertência"
+    ],
+    "candidates": [
+        {
+            "name": "teste",
+            "email": "teste@teste.com",
+            "phone": "16992727711",
+            "spaceAvailable": "front end"
+        },
+        {
+            "name": "teste2",
+            "email": "teste2@teste.com",
+            "phone": "16992727711",
+            "spaceAvailable": "back-end"
+        }
+    ],
+    "spaceAvailable": [
+        {
+            "name": "front end",
+            "description": "essa vaga faz isso isso e isso",
+            "requirement": [
+                "Reactjs", "React Native", "Typescript" 
+            ],
+            "deferential": [
+                "Flutter", "UI|UX"
+            ],
+            "salary": {
+                "3month": 1000,
+                "6month": 2000,
+                "month": 3000
+            }
+        },
+        {
+            "name": "back-end",
+            "description": "essa vaga faz aquilo aquilo aquilo",
+            "requirement": [
+                "Node", "Typescript" 
+            ],
+            "deferential": [
+                "MongoDB", "Docker"
+            ],
+            "salary": {
+                "salary": 1000,
+                "3meses": 1000,
+                "6meses": 2000,
+                "last": 3000
+            }
+        }
+    ]
+}
+    
