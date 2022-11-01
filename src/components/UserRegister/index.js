@@ -5,7 +5,7 @@ import { BiLogOut } from "react-icons/bi";
 import { Modal, TitleModal, Content, ButtonGlobal, NotInteressGlobal } from '../../styles/global'
 import { Input } from './styled'
 
-function UserRegister({newComponent, setNameParams}) {
+function UserRegister({newComponent, finish}) {
   return (
     <Modal>
         <TitleModal>XYZ Tecnologia</TitleModal>
@@ -16,7 +16,7 @@ function UserRegister({newComponent, setNameParams}) {
             <Input placeholder='Celular' />
         </Content>
         <ButtonGlobal onClick={() => newComponent()}>Confirmar</ButtonGlobal>
-        <NotInteressGlobal>Não tenho interesse <BiLogOut size={20} color='#FF5700' style={{marginLeft: 5}}/></NotInteressGlobal>
+        <NotInteressGlobal onClick={() => finish()}>Não tenho interesse <BiLogOut size={20} color='#FF5700' style={{marginLeft: 5}}/></NotInteressGlobal>
     </Modal>
   );
 }

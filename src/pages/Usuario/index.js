@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Container } from './styles';
 
 import Login from '../../components/UserRegister'
+import Thanks from '../../components/Thanks'
+import SpaceAvailable from '../../components/SpaceAvailable'
 
 function Usuario() {
     const [component, setComponent] = useState('Login')
@@ -10,11 +12,14 @@ function Usuario() {
   
     return (
     <Container>
-        {component == "Login" && (
-            <Login newComponent={() => setComponent("Teste")} setNameParams={(text) => console.log(text)}/>
+        {component == "Thanks" && (
+            <Thanks newComponentFinish={() => setComponent("Login")}/>
         )}
-        {component == "Teste" && (
-            <span>Teste</span>
+        {component == "Login" && (
+            <Login newComponent={() => setComponent("SpaceAvailable")} newComponentFinish={() => setComponent("Thanks")}/>
+        )}
+        {component == "SpaceAvailable" && (
+            <SpaceAvailable newComponent={() => setComponent("Description")} newComponentFinish={() => setComponent("Thanks")}/>
         )}
     </Container>
   );
