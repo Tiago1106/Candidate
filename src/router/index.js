@@ -1,14 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Login from '../pages/login'
-import Finish from '../pages/finish'
+import Usuario from '../pages/Usuario'
 
 function router() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Login />}/>
-            <Route path='/last' element={<Finish />}/>
+            <Route path='/' element={<Usuario />}/>
         </Routes>
     </BrowserRouter>
   );
