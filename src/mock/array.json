@@ -30,9 +30,10 @@
                 "Flutter", "UI|UX"
             ],
             "salary": {
+                "salary": 1000,
                 "3month": 1000,
                 "6month": 2000,
-                "month": 3000
+                "last": 3000
             }
         },
         {
