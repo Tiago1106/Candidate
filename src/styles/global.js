@@ -23,6 +23,11 @@ export const TitleModal = styled.span`
 export const TextModal = styled.span`
   font-size: 22px;
   color: #2D2D2D;
+
+  display: flex;
+  align-items: center;
+
+  text-align: center;
 `
 
 export const ButtonGlobal = styled.button`
@@ -70,6 +75,16 @@ export const Content = styled.div`
   
   width: 100%;
   height: 100%;
+`
+
+export const TitleContent = styled.span`
+  font-size: 22px;
+  color: #2D2D2D;
+
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
 `
 
 
