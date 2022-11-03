@@ -10,6 +10,13 @@ import Requirement from '../../components/Requirement';
 import Deferential from '../../components/Deferential';
 import Salary from '../../components/Salary';
 import Mvv from '../../components/MVV';
+import TestLogic from '../../components/TestLogic';
+import PoliticSecurity from '../../components/PoliticSecurity';
+import Punishment from '../../components/Punishment';
+import TestInterpretation from '../../components/TestInterpretation';
+import TestTechnical from '../../components/TestTechnical';
+import FinishMeeting from '../../components/FinishMeeting';
+
 
 function Usuario() {
     const [component, setComponent] = useState('Login')
@@ -20,6 +27,10 @@ function Usuario() {
     const [phone, setPhone] = useState('')
 
     const [spaceAvailable, setSpaceAvailable] = useState('')
+
+    const [fileLogic, setFileLogic] = useState()
+    const [fileInterpretation, setFileInterpretation] = useState()
+    const [fileTechinical, setFileTechinical] = useState()
   
     return (
     <Container>
@@ -69,8 +80,46 @@ function Usuario() {
         )}
         {component == "Mvv" && (
             <Mvv 
-                newComponent={() => setComponent("Mvv")} 
+                newComponent={() => setComponent("PoliticSecurity")} 
                 newComponentFinish={() => setComponent("Thanks")} 
+            />
+        )}
+        {component == "PoliticSecurity" && (
+            <PoliticSecurity 
+                newComponent={() => setComponent("Punishment")} 
+                newComponentFinish={() => setComponent("Thanks")} 
+            />
+        )}
+        {component == "Punishment" && (
+            <Punishment 
+                newComponent={() => setComponent("TestLogic")} 
+                newComponentFinish={() => setComponent("Thanks")} 
+            />
+        )}
+        {component == "TestLogic" && (
+            <TestLogic 
+                newComponent={() => setComponent("TestInterpretation")} 
+                newComponentFinish={() => setComponent("Thanks")} 
+                setFile={setFileLogic}
+            />
+        )}
+        {component == "TestInterpretation" && (
+            <TestInterpretation 
+                newComponent={() => setComponent("TestTechnical")} 
+                newComponentFinish={() => setComponent("Thanks")} 
+                setFile={setFileInterpretation}
+            />
+        )}
+        {component == "TestTechnical" && (
+            <TestTechnical 
+                newComponent={() => setComponent("FinishMeeting")} 
+                newComponentFinish={() => setComponent("Thanks")} 
+                setFile={setFileTechinical}
+            />
+        )}
+        {component == "FinishMeeting" && (
+            <FinishMeeting 
+                newComponentFinish={() => setComponent("Login")}
             />
         )}
     </Container>
