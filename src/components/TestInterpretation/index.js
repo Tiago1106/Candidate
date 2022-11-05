@@ -5,10 +5,10 @@ import { BiLogOut } from "react-icons/bi";
 import { Modal, TitleModal, Content, ButtonGlobal, NotInteressGlobal, TextModal, TitleContent } from '../../styles/global';
 import { TextSelectText } from './styles'
 
-function TestInterpretation({newComponent, newComponentFinish, setFile}) {
+function TestInterpretation({newComponent, newComponentFinish, setFile, arraySpaceAvailable}) {
   return (
     <Modal>
-        <TitleModal>Vaga: Front-End Senio</TitleModal>
+        <TitleModal>Vaga: {arraySpaceAvailable.name}</TitleModal>
         <Content>
             <TitleContent style={{margin: 0}}>Teste de interpretação de texto:</TitleContent>
             <TextSelectText>Vizualize aqui</TextSelectText>

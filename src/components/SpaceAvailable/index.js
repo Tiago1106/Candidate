@@ -1,29 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { BiLogOut } from "react-icons/bi";
 
 import { Modal, TitleModal, Content, ButtonGlobal, NotInteressGlobal, TextModal } from '../../styles/global'
 import { ButtonRadio, RowRadio } from './styles';
 
-function SpaceAvailable({newComponent, newComponentFinish, setSpaceAvailable}) {
+function SpaceAvailable({newComponent, newComponentFinish, options, setArraySpaceAvailable}) {
+  const [next, setNext] = useState(true)
+  
   return (
     <Modal>
         <TitleModal>Tem interesse em alguma vaga?</TitleModal>
         <Content>
-            <RowRadio>
-                <ButtonRadio type="radio" value="Front-end" name="SpaceAvailable" onChange={(e) => setSpaceAvailable(e.target.value)}/>
-                <TextModal>Front-end</TextModal>
-            </RowRadio>
-            <RowRadio>
-                <ButtonRadio type="radio" value="Back-end" name="SpaceAvailable" onChange={(e) => setSpaceAvailable(e.target.value)}/>
-                <TextModal>Back-end</TextModal>
-            </RowRadio>
-            <RowRadio>
-                <ButtonRadio type="radio" value="PO" name="SpaceAvailable" onChange={(e) => setSpaceAvailable(e.target.value)}/>
-                <TextModal>PO</TextModal>
-            </RowRadio>
+            {options.map((e) => (
+                <RowRadio key={e.name}>
+                    <ButtonRadio type="radio" value={e.name} name="SpaceAvailable" onChange={(event) => {setNext(false); setArraySpaceAvailable(e)}}/>
+                    <TextModal>{e.name}</TextModal>
+                </RowRadio>
+            ))}
         </Content>
-        <ButtonGlobal onClick={() => newComponent()}>Confirmar</ButtonGlobal>
+        <ButtonGlobal onClick={() => newComponent()} disabled={next}>Confirmar</ButtonGlobal>
         <NotInteressGlobal onClick={() => newComponentFinish()}>Não tenho interesse <BiLogOut size={20} color='#FF5700' style={{marginLeft: 5}}/></NotInteressGlobal>
     </Modal>
   );

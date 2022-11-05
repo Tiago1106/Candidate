@@ -5,10 +5,10 @@ import { BiLogOut } from "react-icons/bi";
 import { Modal, TitleModal, Content, ButtonGlobal, NotInteressGlobal, TitleContent } from '../../styles/global';
 import { TextSelectText } from './styles'
 
-function PoliticSecurity({newComponent, newComponentFinish}) {
+function PoliticSecurity({newComponent, newComponentFinish, arraySpaceAvailable}) {
   return (
     <Modal>
-        <TitleModal>Vaga: Front-End Senio</TitleModal>
+        <TitleModal>Vaga: {arraySpaceAvailable.name}</TitleModal>
         <Content>
             <TitleContent style={{margin: 0}}>Política de Segurança da Informação:</TitleContent>
             <TextSelectText>Clique aqui para acessar</TextSelectText>

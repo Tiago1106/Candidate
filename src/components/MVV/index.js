@@ -5,10 +5,10 @@ import { BiLogOut } from "react-icons/bi";
 import { Modal, TitleModal, Content, ButtonGlobal, NotInteressGlobal, TextModal, TitleContent } from '../../styles/global'
 // import { Container } from './styles';
 
-function Mvv({newComponent, newComponentFinish}) {
+function Mvv({newComponent, newComponentFinish, arraySpaceAvailable}) {
   return (
     <Modal>
-        <TitleModal>Vaga: Front-end Sênior </TitleModal>
+        <TitleModal>Vaga: {arraySpaceAvailable.name} </TitleModal>
         <Content style={{overflowY: 'scroll', maxHeight: "100%", paddingTop: 65}}>
             <TitleContent style={{margin: 0}}>Missão:</TitleContent>
             <TextModal>Proporcionar os melhores materiais ao cliente, oferecendo-os por meio de canais físicos e digitais, sempre com o intuito de tornar a experiência de consumo ágil e garantir que ela seja a mais prazerosa possível, ajustando-a às necessidades de cada cliente e buscando ultrapassar as suas expectativas.</TextModal>

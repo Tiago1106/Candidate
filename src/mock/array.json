@@ -30,10 +30,10 @@
                 "Flutter", "UI|UX"
             ],
             "salary": {
-                "salary": 1000,
-                "3month": 1000,
-                "6month": 2000,
-                "last": 3000
+                "salary": "1000,00",
+                "monthOne": "2200,00",
+                "monthTwo": "3000,00",
+                "last": "4500,00"
             }
         },
         {
@@ -46,10 +46,10 @@
                 "MongoDB", "Docker"
             ],
             "salary": {
-                "salary": 1000,
-                "3meses": 1000,
-                "6meses": 2000,
-                "last": 3000
+                "salary": "1000,00",
+                "monthOne": "2200,00",
+                "monthTwo": "3000,00",
+                "last": "4500,00"
             }
         }
     ]
