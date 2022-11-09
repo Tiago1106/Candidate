@@ -31,9 +31,9 @@ function Usuario() {
 
     const [spaceAvailable, setSpaceAvailable] = useState()
 
-    const [fileLogic, setFileLogic] = useState()
-    const [fileInterpretation, setFileInterpretation] = useState()
-    const [fileTechinical, setFileTechinical] = useState()
+    const [fileLogic, setFileLogic] = useState() // eslint-disable-next-line
+    const [fileInterpretation, setFileInterpretation] = useState() // eslint-disable-next-line
+    const [fileTechinical, setFileTechinical] = useState() // eslint-disable-next-line
 
     useEffect(() => {
         setEmail('')
@@ -41,14 +41,16 @@ function Usuario() {
         setName('')
         setPhone('')
         setSpaceAvailable()
+
+
     }, [cleanSetStates])
 
     return (
     <Container>
-        {component == "Thanks" && (
+        {component === "Thanks" && (
             <Thanks newComponentFinish={() => {setComponent("Login"); setCleanSetStates(!cleanSetStates)}}/>
         )}
-        {component == "Login" && (
+        {component === "Login" && (
             <Login 
                 newComponent={() => setComponent("SpaceAvailable")} 
                 newComponentFinish={() => setComponent("Thanks")}
@@ -58,7 +60,7 @@ function Usuario() {
                 setPhone={setPhone} valuePhone={phone}
             />
         )}
-        {component == "SpaceAvailable" && (
+        {component === "SpaceAvailable" && (
             <SpaceAvailable 
                 newComponent={() => setComponent("Description")} 
                 newComponentFinish={() => setComponent("Thanks")} 
@@ -66,49 +68,49 @@ function Usuario() {
                 options={Mock.spaceAvailable}
             />
         )}
-        {component == "Description" && (
+        {component === "Description" && (
             <Description 
                 newComponent={() => setComponent("Requirement")} 
                 newComponentFinish={() => setComponent("Thanks")}
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "Requirement" && (
+        {component === "Requirement" && (
             <Requirement 
                 newComponent={() => setComponent("Deferential")} 
                 newComponentFinish={() => setComponent("Thanks")} 
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "Deferential" && (
+        {component === "Deferential" && (
             <Deferential 
                 newComponent={() => setComponent("Salary")} 
                 newComponentFinish={() => setComponent("Thanks")} 
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "Salary" && (
+        {component === "Salary" && (
             <Salary 
                 newComponent={() => setComponent("Mvv")} 
                 newComponentFinish={() => setComponent("Thanks")}
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "Mvv" && (
+        {component === "Mvv" && (
             <Mvv 
                 newComponent={() => setComponent("PoliticSecurity")} 
                 newComponentFinish={() => setComponent("Thanks")} 
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component =="PoliticSecurity" && (
+        {component === "PoliticSecurity" && (
             <PoliticSecurity 
                 newComponent={() => setComponent("Punishment")} 
                 newComponentFinish={() => setComponent("Thanks")} 
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "Punishment" && (
+        {component === "Punishment" && (
             <Punishment 
                 newComponent={() => setComponent("TestLogic")} 
                 newComponentFinish={() => setComponent("Thanks")} 
@@ -116,7 +118,7 @@ function Usuario() {
                 options={Mock}
             />
         )}
-        {component == "TestLogic" && (
+        {component === "TestLogic" && (
             <TestLogic 
                 newComponent={() => setComponent("TestInterpretation")} 
                 newComponentFinish={() => setComponent("Thanks")} 
@@ -124,7 +126,7 @@ function Usuario() {
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "TestInterpretation" && (
+        {component === "TestInterpretation" && (
             <TestInterpretation 
                 newComponent={() => setComponent("TestTechnical")} 
                 newComponentFinish={() => setComponent("Thanks")} 
@@ -132,7 +134,7 @@ function Usuario() {
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "TestTechnical" && (
+        {component === "TestTechnical" && (
             <TestTechnical 
                 newComponent={() => setComponent("FinishMeeting")} 
                 newComponentFinish={() => setComponent("Thanks")} 
@@ -140,7 +142,7 @@ function Usuario() {
                 arraySpaceAvailable={spaceAvailable}
             />
         )}
-        {component == "FinishMeeting" && (
+        {component === "FinishMeeting" && (
             <FinishMeeting 
                 newComponentFinish={() => {setComponent("Login"); setCleanSetStates(!cleanSetStates)}}
             />

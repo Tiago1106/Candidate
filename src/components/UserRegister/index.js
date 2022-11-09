@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { BiLogOut } from "react-icons/bi";
-import { RiAdminLine } from "react-icons/ri";
 
 import { Modal, TitleModal, Content, ButtonGlobal, NotInteressGlobal } from '../../styles/global'
 import { Input } from './styled'
