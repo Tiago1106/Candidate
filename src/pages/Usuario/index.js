@@ -46,7 +46,7 @@ function Usuario() {
     return (
     <Container>
         {component == "Thanks" && (
-            <Thanks newComponentFinish={() => setComponent("Login")}/>
+            <Thanks newComponentFinish={() => {setComponent("Login"); setCleanSetStates(!cleanSetStates)}}/>
         )}
         {component == "Login" && (
             <Login 

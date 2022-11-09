@@ -25,7 +25,6 @@ function UserRegister({
         </Content>
         <ButtonGlobal onClick={() => newComponent()}>Confirmar</ButtonGlobal>
         <NotInteressGlobal onClick={() => newComponentFinish()}>Não tenho interesse <BiLogOut size={20} color='#FF5700' style={{marginLeft: 5}}/></NotInteressGlobal>
-        <NotInteressGlobal onClick={() => newComponentFinish()}>Acessar como ADMIN <RiAdminLine size={20} color='#FF5700' style={{marginLeft: 5}}/></NotInteressGlobal>
     </Modal>
   );
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import { Modal, TitleModal, Content, ButtonGlobal, TextModal, TitleContent } from '../../styles/global'
 // import { Container } from './styles';
 
-function FinishMeeting({newComponentFinish, }) {
+function FinishMeeting({newComponentFinish}) {
   return (
     <Modal>
         <TitleModal>XYZ Tecnologia</TitleModal>
